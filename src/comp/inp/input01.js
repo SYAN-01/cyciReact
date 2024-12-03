@@ -1,13 +1,16 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 export default function InputStudy() {
 
     const [inp, setInp] = useState('');
+    const navigate = useNavigate();
 
     function send() {
-        alert(inp);
 
-        localStorage.setItem('study')
+        localStorage.setItem('study', inp);
+        navigate('/oup1');
+
     }
 
     return (
@@ -17,8 +20,10 @@ export default function InputStudy() {
                 type='text'
                 value={inp}
                 onChange={ e=> setInp(e.target.value) } />
-
-                <input type='button' value='전송' onClick={send}/>
+            
+            <input type='button'
+                value='전송'
+                onClick={send} />
         </div>
     )
 }
