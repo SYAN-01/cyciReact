@@ -9,6 +9,8 @@ import Oup1 from './comp/inp/output01'
 import MyInp from './comp/my/myinput'
 import MyOup from './comp/my/myoutput'
 
+import Ax1 from './comp/ax/ax01'
+
 function App() {
   return (
     <div className="App">
@@ -24,6 +26,8 @@ function App() {
 
           <Route path={"/myinp"} element={<MyInp />} />
           <Route path={"/myoup"} element={<MyOup />} />
+
+          <Route path={"/ax1"} element={<Ax1 />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -49,9 +53,12 @@ function Home() {
       <Link to="/inp1">데이터 입력</Link><br/>
       <Link to="/oup1">데이터 출력</Link><br/>
 
-      <h4>회원가입</h4>
+      <h4>회원가입(과제)</h4>
       <Link to="/myinp">데이터 입력</Link><br/>
       <Link to="/myoup">데이터 출력</Link><br/>
+
+      <h4>axios</h4>
+      <Link to="/ax1">axois 사용</Link><br/>
     </div>
   )
 }
