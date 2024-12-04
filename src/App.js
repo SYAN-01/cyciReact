@@ -6,6 +6,9 @@ import Calc1 from './comp/calc/study01'
 import Inp1 from './comp/inp/input01'
 import Oup1 from './comp/inp/output01'
 
+import MyInp from './comp/my/myinput'
+import MyOup from './comp/my/myoutput'
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,9 @@ function App() {
 
           <Route path={"/inp1"} element={<Inp1 />} />
           <Route path={"/oup1"} element={<Oup1 />} />
+
+          <Route path={"/myinp"} element={<MyInp />} />
+          <Route path={"/myoup"} element={<MyOup />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -42,6 +48,10 @@ function Home() {
       <h4>데이터 옮기기</h4>
       <Link to="/inp1">데이터 입력</Link><br/>
       <Link to="/oup1">데이터 출력</Link><br/>
+
+      <h4>회원가입</h4>
+      <Link to="/myinp">데이터 입력</Link><br/>
+      <Link to="/myoup">데이터 출력</Link><br/>
     </div>
   )
 }
